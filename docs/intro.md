@@ -2,46 +2,75 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# voidX AI 서비스 시작 가이드
 
-Let's discover **Docusaurus in less than 5 minutes**.
+> voidX AI에 오신 것을 환영합니다!
+>
+>
+> 본 가이드는 voidX AI Agent를 고객님의 웹사이트에 적용하고 관리하는 전 과정을 안내합니다.
+>
+> voidX AI는 방문자의 행동(커서 움직임, 스크롤 등)을 실시간으로 분석하여 최적의 가이드를 선제적으로 제공하는 솔루션입니다. 서비스를 이제 막 알아보고 계신 분들과, 결제를 완료하고 설정을 시작하는 분들 모두에게 유용한 정보를 담았습니다.
+>
 
-## Getting Started
+## 1. AI Agent 적용 안내 (3-Step)
 
-Get started by **creating a new site**.
+고객님의 웹사이트에 AI Agent를 활성화하는 방법은 매우 간단합니다. 아래 **3가지 필수 단계**를 따라 진행해주세요.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### Step 1: 연동 정보 확인하기
 
-### What you'll need
+AI Agent를 웹사이트와 연동하기 위해서는 **API Key**와 **JS SDK URL**이 필요합니다. 이 정보는 Admin 페이지에서 확인할 수 있습니다.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+1. [voidX.ai 홈페이지](https://voidx.ai/)에서 가입 후, [Admin 페이지](https://admin.voidx.ai/)로 이동하여 로그인합니다.
+2. **'개발자 설정'** 또는 **'API 연동 정보'** 메뉴로 이동합니다.
+3. 아래 세 가지 핵심 정보를 확인합니다.
+  - **voidX AI API Key**: 고객님 계정의 고유 식별 키입니다. 외부 유출에 주의해주세요.
+  - **JS SDK URL**: 웹사이트에 설치할 Javascript 파일의 경로입니다.
+  - **허용 도메인 (Allowed Domains)**: AI Agent가 작동할 웹사이트의 주소를 등록하는 곳입니다. `www.example.com`과 같이 정확한 도메인을 입력해야 합니다.
 
-## Generate a new site
+### Step 2: 웹사이트 코드에 스크립트 삽입하기
 
-Generate a new Docusaurus site using the **classic template**.
+1. 위에서 확인한 **JS SDK URL**과 **API Key**를 사용하여 아래와 같은 스크립트 코드를 만듭니다.
 
-The classic template will automatically be added to your project after you run the command:
+    ```
+    <!-- voidX.ai AI Agent Script Start -->
+    <script src="[여기에 JS SDK URL을 붙여넣으세요]"></script>
+    <script>
+      voidx.init({
+        apiKey: "[여기에 voidX AI API Key를 붙여넣으세요]"
+      });
+    </script>
+    <!-- voidX.ai AI Agent Script End -->
+    
+    ```
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+2. 완성된 스크립트 코드를 복사하여, AI Agent를 설치할 웹사이트 HTML의 `</body>` 태그 바로 위에 삽입합니다.
+3. 수정한 파일을 웹 서버에 업로드합니다. 이제 기술적인 적용은 완료되었습니다.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### Step 3: 최종 사용자에 대한 고지 의무 이행하기 (필수)
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+**서비스 이용약관 제2조에 따라, 고객님께서는 웹사이트 방문자에게 voidX AI 서비스 사용 사실과 데이터 수집에 대해 명확하게 고지할 의무가 있습니다.** 이는 법적 책임을 다하고 고객과 방문자 간의 신뢰를 구축하는 데 매우 중요한 과정입니다.
 
-## Start your site
+- **개인정보 처리방침 업데이트**: 웹사이트의 '개인정보 처리방침'에 데이터 수집 항목(비식별 상호작용 데이터)과 이용 목적(AI 기반 경험 최적화)을 명시하세요.
+- **고지 배너 사용**: 웹사이트 방문 시 "더 나은 사용자 경험을 위해 행동 데이터를 분석하는 AI 서비스를 사용합니다."와 같은 문구로 고지하고 필요한 경우 동의를 받으세요.
 
-Run the development server:
+## 2. Admin 페이지 이용 안내
 
-```bash
-cd my-website
-npm run start
-```
+Admin 페이지는 AI Agent의 성과를 확인하고 팀원과 협업하며 설정을 관리하는 통합 관리 도구입니다.
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+- **접속 방법**: https://admin.voidx.ai/으로 직접 접속할 수 있습니다.
+- **주요 기능**: 대시보드, AI Agent 커스터마이징, 지식 베이스 관리, 결제 정보 확인 등
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+### 사용자 역할(Role) 및 권한 안내
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Admin 페이지에서는 팀원들을 초대하고 역할을 부여하여 효율적으로 협업할 수 있습니다. 역할은 총 3가지입니다.
+
+| **역할 (Role)** | **주요 권한** | **설명** |
+| --- | --- | --- |
+| **Admin** | 모든 설정 변경, 멤버 초대 및 역할 관리, 결제 정보 관리, API Key 접근 등 **모든 기능에 대한 권한**을 가집니다. | 서비스 소유자 또는 총괄 책임자에게 적합한 역할입니다. |
+| **Editor** | AI Agent 커스터마이징, 지식 베이스 편집 등 **운영에 관련된 대부분의 설정 변경 권한**을 가집니다. | 개발자 설정(API 키)이나 멤버 관리, 결제 정보에는 접근할 수 없습니다. 마케터나 운영자에게 적합합니다. |
+| **Viewer** | 대시보드, 통계 데이터 등 **모든 정보를 조회**할 수 있으나, 설정을 변경할 수는 없습니다. | 데이터 분석이나 성과 보고가 필요한 팀원에게 부여할 수 있는 읽기 전용 역할입니다. |
+
+## 3. 서비스 이용 관련 중요 안내
+
+- **AI 가이드는 확률적 추천입니다**: AI Agent가 제공하는 안내는 방문자의 행동을 기반으로 한 확률적 추천이며, 그 정확성이나 완전성을 100% 보증하지 않습니다. (약관 제5조)
+- **데이터 활용**: 수집된 비식별 데이터는 서비스 품질 및 AI 모델 개선을 위한 통계 분석에 익명으로 활용될 수 있습니다. (약관 제3조)
