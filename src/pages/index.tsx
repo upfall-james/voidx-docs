@@ -20,8 +20,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-              voidX AI 서비스 시작 가이드
+            to="/docs/start_voidx">
+              voidX AI 서비스 시작하기
           </Link>
         </div>
       </div>

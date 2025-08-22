@@ -96,7 +96,7 @@ const config: Config = {
           items: [
             {
               label: '시작 가이드',
-              to: '/docs/intro',
+              to: '/docs/start_voidx',
             },
           ],
         },
