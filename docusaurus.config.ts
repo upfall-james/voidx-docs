@@ -14,8 +14,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // };
 
 const config: Config = {
-  title: 'VoidX Docs Site',
-  tagline: '보이드엑스 사용자 지원 사이트',
+  title: 'voidX AI Docs Site',
+  tagline: 'voidX 사용자 지원 사이트',
   favicon: 'img/pav-145_bk.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -68,7 +68,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'VoidX Docs',
+      title: 'voidX Docs',
       // logo: {
         // alt: 'My Site Logo',
         // src: 'img/logo.svg',
@@ -131,7 +131,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} voidx ai, Inc. upfall`,
+      copyright: `Copyright © ${new Date().getFullYear()} voidX AI, Inc. upfall`,
     },
     prism: {
       theme: prismThemes.github,
