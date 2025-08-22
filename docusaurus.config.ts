@@ -16,7 +16,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'VoidX Docs Site',
   tagline: '보이드엑스 사용자 지원 사이트',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/pav-145_bk.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
