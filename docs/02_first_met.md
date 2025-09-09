@@ -2,7 +2,9 @@
 sidebar_position: 2
 ---
 
-# **🚀 voidX AI와 첫 만남**
+# voidX AI와 첫 만남
+
+## **🚀 voidX AI와 첫 만남**
 
 voidX AI를 만나는 가장 빠른 방법, 소개해 드릴게요. 복잡한 설치 과정 없이 아래 2단계만 따라 하면 금방 끝나요! (약 5분 소요)
 

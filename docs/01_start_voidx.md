@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
 ---
+# voidX AI 시작하기
 
-# **voidX AI 시작하기**
+## **voidX AI 시작하기**
 
 ---
 
